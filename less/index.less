@@ -31,10 +31,11 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-image: url("https://i.imgur.com/oJqNJaL.jpg");
-	background-position: top;
+	background-image: url("https://i.imgur.com/5XcRDcA.jpg");
+	background-position: center;
 	background-repeat: no-repeat;
-	height: 1000px;
+	background-size:  100%;
+	background-attachment: fixed;
 
 }
 ol, ul {
@@ -69,7 +70,7 @@ html, body {
 }
 
 .container {
-	width: 800px;
+	width: 700px;
 	margin: auto;
 	padding: 0;
 }
@@ -98,18 +99,29 @@ header nav a {
 }
 
 #home {
-	background-color: whitesmoke;
+	background-color: white;
 }
 
 #home div {
+	width: 45%;
+	justify-content: space-between;
 	padding: 1rem;
 	font-size: 1.1rem;
+	ul {
+		list-style-type: circle;
+		list-style-position: inside;
+		h3 {
+			line-height: 2;
+		}
+		li {
+			line-height: 2
+		}
+	}
 }
 
-#home div h2 {
+#home div h2, img {
 	font-size: 2rem;
-	margin: 1.1rem;
-	text-align: center;
+	margin: 1.1rem 1.1rem 1.1rem 0;
 	width: 100%;
 }
 
@@ -138,11 +150,22 @@ button {
 
 #work-experience {
 	background-color: white;
-}
 
-#work-experience div {
-	margin: 1.2rem;
-}
+	div {
+		justify-content: center;
+		width: 60%;
+		margin: 1.1rem auto;
+			p{
+				margin-top: 1.1rem;
+			}
+		
+			h2 {
+				margin-top: 1.1rem;
+			}
+	}//closes div
+}//closes work-experience id
+
+
 
 footer {
 	background-color: gray;
