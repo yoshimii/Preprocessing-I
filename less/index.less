@@ -54,7 +54,17 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+@font-white: white; 
+
+.space() {
+	width: 100%;
+	margin: 1.2rem;
+}
+
+
+h1, h2, h3, p, ul {
+	font-family: 'IBM Plex Mono', monospace;
+}
 
 h2 {
 	font-size: 20px;
@@ -86,7 +96,7 @@ header nav{
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	height: 4rem;
-	background-color: white;
+	background-color: @font-white;
 	width: 100%;
 
 }
@@ -99,7 +109,7 @@ header nav a {
 }
 
 #home {
-	background-color: white;
+	background-color: @font-white;
 }
 
 #home div {
@@ -128,28 +138,33 @@ header nav a {
 #projects {
 	padding-top: 1.2rem;
 	width: 100%;
-	background: gray;
+	background: @font-white;
 }
 #projects div {
 	justify-content: space-between;
 	flex-direction: column;
-	margin: 0;
-	width: 100%;
+	.space();
 	padding-top: 1.2rem;
 	align-items: center;
-}
+	div {
+		margin: 0;
+		width: 80%;
+		display: flex;
 
-#projects div div {
-margin: 0;
-width: 80%;
-}
+		img {
+			height: 300px;
+			width: 300px;
+			margin: 0;
+			border: 1px solid mediumspringgreen;
+		}//closes img
 
-button {
-	margin: 1rem;
-}
+		}//closes div
+}//closes projects div
+
+
 
 #work-experience {
-	background-color: white;
+	background-color: @font-white;
 
 	div {
 		justify-content: center;
@@ -157,6 +172,7 @@ button {
 		margin: 1.1rem auto;
 			p{
 				margin-top: 1.1rem;
+				font-weight: 300;
 			}
 		
 			h2 {
@@ -168,9 +184,50 @@ button {
 
 
 footer {
+	width: 100%;
 	background-color: gray;
+	color: @font-white;
+
+	ul {
+		width: 100%;
+		margin: 1.2rem;
+
+		li {
+			line-height: 1.5;
+		}
+		a {
+			text-decoration: none;
+			color: @font-white;
+		}
+		
+	}//closes ul
+
+	h3 {
+		.space();
+		text-align: center;
+	}
+}//closes footer
+
+
+button {
+	border: none;
+	width: 8rem;
+	height: 2rem;
+	margin: 1.2rem;
 }
 
-footer ul {
-	margin: 1.2rem;
+button:hover {
+	animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@media(max-width: 500px) {
+	#home {
+		flex-direction: column;
+		align-items: center;
+	}
 }
